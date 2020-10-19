@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200;300;400;600&family=Monoton&family=Poiret+One&display=swap');
+
+:root {
+    --red: #E54B4B;
+    --yellow: #FFFF63;
+    --blue:  #2144C5;
+    --dkblue: #102A6D;
+    --mdgray: #3d4148;
+    --gray: #292c31;
+    --dkgray: #1d2023;
+
+    --background: black;
+    --color: white; 
+
+    --colorizered: brightness(20%) sepia(100%) saturate(400%) hue-rotate(-40deg);
+    --colorizeyellow: brightness(20%) sepia(100%) saturate(300%) hue-rotate(10deg);
+    --colorizeblue: brightness(20%) sepia(100%) saturate(400%) hue-rotate(180deg);
+
+    --font-thin: 'Poiret One', cursive;
+    --font-type: 'Jost', sans-serif;
+    --font-brash: 'Monoton', cursive;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit
+}
+
+body {
+    background: var(--background);
+    min-height: calc(100vh - 100px);
+	margin: 0;
+	font-family: var(--font-type);
+}
+
+a {
+	color: rgb(0,100,200);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:visited {
+	color: rgb(0,80,160);
+}
+
+label {
+	display: block;
+}
+
+input, button, select, textarea {
+	font-family: inherit;
+	font-size: inherit;
+	-webkit-padding: 0.4em 0;
+	padding: 0.4em;
+	margin: 0 0 0.5em 0;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-radius: 2px;
+}
+
+input:disabled {
+	color: #ccc;
+}
+
+button {
+	color: #333;
+	background-color: #f4f4f4;
+	outline: none;
+}
+
+button:disabled {
+	color: #999;
+}
+
+button:not(:disabled):active {
+	background-color: #ddd;
+}
+
+button:focus {
+	border-color: #666;
+}
+
+.container {
+    color: var(--color);
+    font-family: var(--font-type);
+    font-weight: 300;
+    margin: 1em;
+}
