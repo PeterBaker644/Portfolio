@@ -60,6 +60,4 @@
         grid-template-rows: 27px;
         margin-left: 1em;
     }
-
-    
 </style>

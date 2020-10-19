@@ -2,9 +2,9 @@
     export let name, color;
     import { pages } from "./stores";
 
-    function setPage() {
-        let array = [...$pages];
-        $pages.forEach((entry, index) => {
+    function setPage(pages) {
+        let array = [...pages];
+        pages.forEach((entry, index) => {
             if (entry.name === name) {
                 array[index] = {...entry, visible:true};
             } else {
@@ -28,6 +28,7 @@ button {
     border: none;
     border-radius: 0;
     background-color: white;
+    cursor: pointer;
 }
 .red:hover {
     background-color: #E54B4B;

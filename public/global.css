@@ -94,3 +94,12 @@ button:focus {
     font-weight: 300;
     margin: 1em;
 }
+
+/* Svelte Transition Fix */
+
+main {
+    display: grid;
+}
+section {
+    grid-area: 1/1/2/2;
+}

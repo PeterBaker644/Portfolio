@@ -1,6 +1,25 @@
-<main class="container" id="about">
-    <div class="text-box">
-        <!--             <img class="profile" src="assets/images/Profile-Cutout-Shadow-Cropped-Face-Circle.png">   -->
+<script>
+    import { fly, fade } from "svelte/transition";
+</script>
+
+<style>
+    section {
+        text-align: center;
+    }
+    img {
+        height: 15em;
+    }
+</style>
+
+<section
+    in:fly={{ y: 100, duration:250, delay: 250 }}
+    out:fly={{ y: -100, duration: 250 }}
+    class="container">
+    <img
+        class="profile"
+        src="assets/images/Profile-Cutout-Shadow-Cropped-Face-Circle.png"
+        alt="author smiling" />
+    <div>
         <p>
             Theatrical scenic artist by day and web developer by night, I’m
             dedicated to story-telling in all mediums.
@@ -17,4 +36,4 @@
             any time.
         </p>
     </div>
-</main>
+</section>
