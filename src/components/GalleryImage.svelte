@@ -1,18 +1,12 @@
 <script>
-    // export let id, name, dateTaken, description, project, venue, openingDate, src; 
-    export let name, src; 
+    // export let id, name, dateTaken, description, project, venue, openingDate, src;
+    import { fade } from "svelte/transition";
+    export let name, src;
+
     function random(limit) {
-        return (Math.floor(Math.random() * limit) + 1)
+        return Math.floor(Math.random() * limit) + 1;
     }
-
 </script>
-
-<div class="item h{random(4)} v{random(4)} preload"> 
-    <img class="" {src} alt={name}>
-    <div class="{String.fromCharCode(96 + random(3))} item-overlay">
-        <button>View</button>
-    </div>
-</div>
 
 <style>
     .item {
@@ -20,10 +14,10 @@
         display: grid;
         grid-template-columns: 1;
         grid-template-rows: 1;
-        animation: imagefadein 2s;
+        /* animation: imagefadein 2s; */
         outline: solid 1rem black;
     }
-    
+
     img {
         grid-column: 1 / -1;
         grid-row: 1 / -1;
@@ -31,7 +25,53 @@
         height: 100%;
         object-fit: cover;
         /* opacity: 0.2; */
-        transition: 1000ms;
+        transition: 500ms;
     }
 
+    .item-overlay {
+        grid-column: 1 / -1;
+        grid-row: 1 / -1;
+        position: relative;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+        transition: 0.2s;
+        transform: translateY(100%);
+    }
+ 
+    button:hover, .item:hover .item-overlay {
+        transform: translateY(0);
+        cursor: pointer;
+    }
+
+    .a {
+        background: #e54b4b80;
+    }
+    .b {
+        background: #ffff6380;
+    }
+    .c {
+        background: #2144c580;
+    }
+
+    button {
+        background: none;
+        border: 2px solid white;
+        color: white;
+        font: var(--font-thin);
+        text-transform: uppercase;
+        background: rgba(0, 0, 0, 0.5);
+        padding: 0.3rem;
+    }
 </style>
+
+<div on:click class="item h{random(4)} v{random(4)}">
+    <img
+        transition:fade={{ duration: 600, delay: 300 }}
+        class=""
+        {src}
+        alt={name} />
+    <div class="{String.fromCharCode(96 + random(3))} item-overlay">
+        <button>View</button>
+    </div>
+</div>

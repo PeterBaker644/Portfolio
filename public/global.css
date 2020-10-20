@@ -9,7 +9,7 @@
     --gray: #292c31;
     --dkgray: #1d2023;
 
-    --background: var(--dkgray);
+    --background: black;
     --color: white;
     /* --background: white;
     --color: black;  */
@@ -95,6 +95,54 @@ button:focus {
     font-family: var(--font-type);
     font-weight: 300;
     margin: 1em;
+}
+
+.h2 {
+    grid-column: span 2;
+}
+
+.h3 {
+    grid-column: span 3;
+}
+
+.h4 {
+    grid-column: span 4;
+}
+
+.v2 {
+    grid-row: span 2;
+}
+
+.v3 {
+    grid-row: span 3;
+}
+
+.v4 {
+    grid-row: span 4;
+}
+
+.b1 {
+    background: var(--red);
+}
+
+.b2 {
+    background: var(--yellow);
+}
+
+.b3 {
+    background: var(--blue);
+}
+
+.item img.visible {
+    opacity: 1;
+}
+
+.item img.faded {
+    /* opacity: 0;
+    filter: grayscale(60%); */
+    /* For Black Background */
+    opacity: 0.7;
+    filter: grayscale(40%) sepia(60%) brightness(10%);
 }
 
 /* Svelte Transition Fix */
