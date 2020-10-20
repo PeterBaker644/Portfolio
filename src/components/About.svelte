@@ -1,4 +1,6 @@
 <script>
+    export let index;
+    import NextButton from "./NextButton.svelte";
     import { fly, fade } from "svelte/transition";
 </script>
 
@@ -12,7 +14,7 @@
 </style>
 
 <section
-    in:fly={{ y: 100, duration:250, delay: 250 }}
+    in:fly={{ y: 100, duration: 250, delay: 250 }}
     out:fly={{ y: -100, duration: 250 }}
     class="container">
     <img
@@ -36,4 +38,5 @@
             any time.
         </p>
     </div>
+    <NextButton {index} />
 </section>

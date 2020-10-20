@@ -2,9 +2,9 @@
     export let name, color;
     import { pages } from "./stores";
 
-    function setPage(pages) {
-        let array = [...pages];
-        pages.forEach((entry, index) => {
+    function setPage() {
+        let array = [...$pages];
+        $pages.forEach((entry, index) => {
             if (entry.name === name) {
                 array[index] = {...entry, visible:true};
             } else {

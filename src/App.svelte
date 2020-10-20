@@ -8,10 +8,9 @@
 
 <Header />
 <main>
-    {#each $pages as { name, component, visible }}
+    {#each $pages as { component, visible }, index}
         {#if visible}
-            <svelte:component this={component} />
-            <button on:click={(event) => console.log(event.currentTarget)} value={name}>THis is a button</button>
+            <svelte:component {index} this={component}/>
         {/if}
     {/each}
 </main>
