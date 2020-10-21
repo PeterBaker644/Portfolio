@@ -1,7 +1,7 @@
 <script>
     // export let id, name, dateTaken, description, project, venue, openingDate, src;
     import { fade } from "svelte/transition";
-    export let name, src;
+    export let id, name, src;
 
     function random(limit) {
         return Math.floor(Math.random() * limit) + 1;
@@ -67,7 +67,8 @@
 
 <div on:click class="item h{random(4)} v{random(4)}">
     <img
-        transition:fade={{ duration: 600, delay: 300 }}
+        id={id}
+        transition:fade={{ duration: 400, delay: 0 }}
         class=""
         {src}
         alt={name} />

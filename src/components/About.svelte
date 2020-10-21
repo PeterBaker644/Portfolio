@@ -9,7 +9,12 @@
         text-align: center;
     }
     img {
+        margin-top: 1em;
         height: 15em;
+    }
+    .text {
+        margin: auto;
+        width: clamp(10em, 80vw, 100vw)
     }
 </style>
 
@@ -21,7 +26,7 @@
         class="profile"
         src="assets/images/Profile-Cutout-Shadow-Cropped-Face-Circle.png"
         alt="author smiling" />
-    <div>
+    <div class="text">
         <p>
             Theatrical scenic artist by day and web developer by night, I’m
             dedicated to story-telling in all mediums.

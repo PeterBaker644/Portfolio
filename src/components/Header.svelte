@@ -18,10 +18,21 @@
         {#each $pages as {color, name}}
             <NavButton {color} {name}/>
         {/each}
+        <div class="social">
+            <a target="_blank" href="https://www.linkedin.com/in/peter-baker-b324a21a3/" class="red-hover"><i class="fab fa-linkedin-in"></i></a>
+            <a target="_blank" href="https://github.com/PeterBaker644/" class="yellow-hover"><i class="fab fa-github"></i></a>
+            <a target="_blank" href="https://www.instagram.com/sirchamomile/" class="blue-hover"><i class="fab fa-instagram"></i></a>
+        </div>
 	</nav>
 </header>
 
 <style>
+    header {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
 	.red {
 		background-color: var(--red);
     }
@@ -31,11 +42,20 @@
     .blue {
 		background-color: var(--blue);
     }
-
+    .red-hover:hover {
+        color: var(--red);
+    }
+    .yellow-hover:hover {
+        color: var(--yellow);
+    }
+    .blue-hover:hover {
+        color: var(--blue);
+    }
     nav {
         background: white;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 1em;
         border: 1em solid var(--background);
         padding: 1em;
@@ -60,4 +80,9 @@
         grid-template-rows: 27px;
         margin-left: 1em;
     }
+    .social a {
+        margin: 0.75em;
+        color: black;
+    }
+
 </style>
