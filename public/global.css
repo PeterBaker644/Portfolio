@@ -11,10 +11,10 @@
     --gray: #292c31;
     --dkgray: #1d2023;
 
-    --background: black;
-    --color: white;
-    /* --background: white;
-    --color: black;  */
+    /* --background: black;
+    --color: white; */
+    --background: white;
+    --color: black; 
 
     --colorizered: brightness(20%) sepia(100%) saturate(400%) hue-rotate(-40deg);
     --colorizeyellow: brightness(20%) sepia(100%) saturate(300%) hue-rotate(10deg);
@@ -39,11 +39,11 @@ body {
     background: var(--background);
     min-height: calc(100vh - 100px);
 	margin: 0;
-	font-family: var(--font-type);
+    font-family: var(--font-type);
 }
 
 a {
-	color: rgb(0,100,200);
+	color: var(--ltblue);
 	text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ a:hover {
 }
 
 a:visited {
-	color: rgb(0,80,160);
+	color: var(--blue);
 }
 
 label {
@@ -140,11 +140,15 @@ button:focus {
 }
 
 .item img.faded {
-    /* opacity: 0;
-    filter: grayscale(60%); */
+    opacity: 0.1;
+    filter: grayscale(60%);
     /* For Black Background */
-    opacity: 0.7;
-    filter: grayscale(40%) sepia(60%) brightness(10%);
+    /* opacity: 0.7;
+    filter: grayscale(40%) sepia(60%) brightness(10%); */
+}
+
+.item-web:not(:last-child) {
+    border-bottom: solid 1em var(--color);
 }
 
 /* Svelte Transition Fix */
@@ -155,3 +159,4 @@ main {
 section {
     grid-area: 1/1/2/2;
 }
+

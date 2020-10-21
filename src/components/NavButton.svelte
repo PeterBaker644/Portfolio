@@ -23,10 +23,10 @@
 <style>
 button {
     margin: 0;
-    width: 5em;
+    width: 4em;
     height: 4em;
     border: none;
-    border-radius: 0;
+    border-radius: 2em;
     background-color: white;
     cursor: pointer;
 }

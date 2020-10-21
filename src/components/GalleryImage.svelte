@@ -15,7 +15,7 @@
         grid-template-columns: 1;
         grid-template-rows: 1;
         /* animation: imagefadein 2s; */
-        outline: solid 1rem black;
+        /* outline: solid 1rem black; */
     }
 
     img {

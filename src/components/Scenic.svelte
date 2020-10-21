@@ -1,6 +1,6 @@
 <script>
     export let index;
-    import { beforeUpdate, afterUpdate } from "svelte";
+    import { afterUpdate } from "svelte";
     import { fly, fade } from "svelte/transition";
     import { list } from "./list";
     import NextButton from "./NextButton.svelte";
@@ -13,8 +13,8 @@
     function handleClick(event) {
         const image = event.currentTarget.querySelector("img")
         overlaySource = image.src;
-        overlayInfo = list[image.id - 1];
-        console.log(displayDate(overlayInfo.dateTaken));
+        let i = list.findIndex(obj => obj.id === Number(image.id));
+        overlayInfo = list[i];
     }
 
     function nextImage(next) {
@@ -51,7 +51,7 @@
         const items = [...document.querySelectorAll("img")];
 
         const options = {
-            rootMargin: "-80px 20%",
+            rootMargin: "-200px 0px -50px 0px",
             threshold: 0.75,
         };
 
@@ -85,6 +85,12 @@
         justify-content: space-between;
     }
     p {
+        margin: 1em 0 0 0;
+    }
+    figcaption p {
+        margin: 0;
+    }
+    h1 {
         margin: 0;
     }
     .inner-overlay button {
@@ -150,6 +156,11 @@
         opacity: 0.8;
         cursor: pointer;
     }
+    .title {
+        padding: 2em 0em;
+        border-bottom: solid 1em var(--color);
+        margin-bottom: 3em;
+    }
     .left:hover {
         animation: bounce-right 0.3s ease-out infinite alternate forwards;
     }
@@ -171,6 +182,12 @@
     class="container"
     in:fly={{ y: 100, duration: 250, delay: 250 }}
     out:fly={{ y: -100, duration: 250 }}>
+    <div class="title">
+        <h1>Examples of my scenic work</h1>
+        <p>A gallery selected scenic works from across the Twin Cites.</p>
+        <p>- Scroll for more -</p>
+    </div>
+    
     {#if overlaySource}
         <div class="overlay" out:fade="{{duration:200}}" on:click={() => {overlaySource = null}}>
             <div class="buttonFrame">
@@ -187,7 +204,7 @@
                         <p>{overlayInfo.project}</p>
                         <p>{overlayInfo.location || ""}</p>
                         <p>{displayDate(overlayInfo.dateTaken) || ""}</p>
-                        <p class="gap">Gallery Number: {overlayInfo.id} </p>
+                        <p class="gap">Gallery #{overlayInfo.id} </p>
                     </figcaption>
                 </figure>
                 <button on:click|stopPropagation={()=>nextImage(true)} class="pageButton right">

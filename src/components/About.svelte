@@ -7,10 +7,11 @@
 <style>
     section {
         text-align: center;
+        /* margin: 5vh 0em; */
     }
     img {
-        margin-top: 1em;
         height: 15em;
+        margin: 4vh 0em 3vh;
     }
     .text {
         margin: auto;

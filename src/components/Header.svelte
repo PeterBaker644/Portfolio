@@ -12,7 +12,8 @@
 			<i class="brand-icon">
 				<div class="red"></div> 
 				<div class="yellow"></div>
-				<div class="blue"></div>
+                <div class="blue"></div>
+                <div class="frame"></div>
 			</i>
 		</div>
         {#each $pages as {color, name}}
@@ -31,7 +32,8 @@
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 1;
+        z-index: 1; 
+        box-shadow: 0 0 0.5em 0.5em rgba(0,0,0,0.1);
     }
 	.red {
 		background-color: var(--red);
@@ -57,31 +59,34 @@
         justify-content: flex-end;
         align-items: center;
         gap: 1em;
-        border: 1em solid var(--background);
-        padding: 1em;
+        padding: 2em;
     }
-
     .brand {
         display: flex;
-        align-items: baseline;
+        align-items: center;
         flex: 1;
         align-self: center;
     }
-
     .brand-title {
         white-space: nowrap;
         font-size: 2.2em;
         margin: 0em;
     }
-
     .brand-icon {
         display: grid;
+        margin-left: 1em;
+
+        /* cicular brand */
+        /* grid-template-columns: 13px 11px 13px;
+        grid-template-rows: 45px;
+        clip-path: circle(17px at center); */
+
+        /* square brand */
         grid-template-columns: repeat(3, 9px);
         grid-template-rows: 27px;
-        margin-left: 1em;
     }
     .social a {
-        margin: 0.75em;
+        padding: 0.75em;
         color: black;
     }
 

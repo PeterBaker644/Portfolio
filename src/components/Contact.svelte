@@ -27,5 +27,8 @@
     <p>
         You can reach me by email <a href="mailto:baker644@umn.edu">here.</a>
     </p>
+    <p>
+        This website was coded in <a href="https://svelte.dev/" style="color:#ff3e00">Svelte</a>.
+    </p>
     <NextButton {index} />
 </section>
