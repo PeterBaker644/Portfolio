@@ -12,16 +12,18 @@
             tech:"Express, Firebase, MongoDB, React, Bootstrap 5", 
             sourceUrl:"https://project-3-recipe-box.herokuapp.com/", 
             github:"Recipe-Journal", 
-            image:"screenshot-recipebox.png"
+            image:"screenshot-recipebox.png",
+            codingTeam: [{name:"Jacob Kyle", git:"jkthomps21"}, {name:"Gene Shaver", git:"gshaver82"}, {name:"Chue Yang", git:"chueny"}]
         },
         {
             id: 1, 
             name:"Mixtape", 
             description:"Mixtape is a social media music sharing website designed for desktop and mobile",
-            tech:"Express, MySQL, Passport, jQuery, Bootstrap", 
+            tech:"Express, MySQL, Handlebars.js, Passport, jQuery, Bootstrap", 
             sourceUrl:"https://github.com/PeterBaker644/Mixtape/", 
             github:"Mixtape", 
-            image:"screenshot-mixtape.png"
+            image:"screenshot-mixtape.png",
+            codingTeam: [{name:"Gene Shaver", git:"gshaver82"}, {name:"Vanida Somchaleunsouk", git:"vsomsouk"},{name:"Simeon Ogunyemi", git:"Simdog"}]
         },
         {
             id: 2, 
@@ -78,7 +80,7 @@
     .title {
         padding: 2em 0em;
         border-bottom: solid 1em var(--color);
-        margin-bottom: 3em;
+        margin: 0em 2em 3em;
     }
 </style>
 
@@ -88,7 +90,7 @@
     out:fly={{ y: -100, duration: 250 }}>
     <div class="title">
         <h1>Examples of my development work</h1>
-        <p>While the following examples are highlights of my work, more projects can be found on my <a href="https://github.com/PeterBaker644/">github</a>.</p>
+        <p>While the following examples are highlights of my work, more projects can be found on my <a href="https://github.com/PeterBaker644/" target="_blank">github</a>.</p>
     </div>
     <div class="examples">
         {#each examples as example}

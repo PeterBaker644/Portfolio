@@ -7,7 +7,7 @@
 <div class="grid item-web">
     <div class="text">
         <h1 class={color}>{name}
-            <a href="https://github.com/PeterBaker644/{github}" class="github {color}">
+            <a href="https://github.com/PeterBaker644/{github}" target="_blank" class="github {color}">
                 <i class="fab fa-github"></i>
             </a>
         </h1>

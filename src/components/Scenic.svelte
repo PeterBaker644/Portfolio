@@ -184,7 +184,7 @@
     out:fly={{ y: -100, duration: 250 }}>
     <div class="title">
         <h1>Examples of my scenic work</h1>
-        <p>A gallery selected scenic works from across the Twin Cites.</p>
+        <p>A gallery of selected scenic works from across the Twin Cites.</p>
         <p>- Scroll for more -</p>
     </div>
     

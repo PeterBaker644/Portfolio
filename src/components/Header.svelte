@@ -77,13 +77,13 @@
         margin-left: 1em;
 
         /* cicular brand */
-        /* grid-template-columns: 13px 11px 13px;
+        grid-template-columns: 13px 11px 13px;
         grid-template-rows: 45px;
-        clip-path: circle(17px at center); */
+        clip-path: circle(17px at center);
 
         /* square brand */
-        grid-template-columns: repeat(3, 9px);
-        grid-template-rows: 27px;
+        /* grid-template-columns: repeat(3, 9px);
+        grid-template-rows: 27px; */
     }
     .social a {
         padding: 0.75em;
