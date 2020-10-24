@@ -15,10 +15,12 @@
                 <div class="blue"></div>
                 <div class="frame"></div>
 			</i>
-		</div>
+        </div>
+        <div class="nav-buttons">
         {#each $pages as {color, name}}
             <NavButton {color} {name}/>
         {/each}
+        </div>
         <div class="social">
             <a target="_blank" href="https://www.linkedin.com/in/peter-baker-b324a21a3/" class="red-hover"><i class="fab fa-linkedin-in"></i></a>
             <a target="_blank" href="https://github.com/PeterBaker644/" class="yellow-hover"><i class="fab fa-github"></i></a>
@@ -56,38 +58,58 @@
     nav {
         background: white;
         display: flex;
-        justify-content: flex-end;
+        flex-flow: wrap;
+        justify-content: center;
         align-items: center;
-        gap: 1em;
-        padding: 2em;
+        /* gap: 0.5em; */
+        padding: 1em;
     }
     .brand {
+        /* flex-grow: 2; */
         display: flex;
         align-items: center;
-        flex: 1;
         align-self: center;
     }
     .brand-title {
         white-space: nowrap;
         font-size: 2.2em;
         margin: 0em;
+        margin-right: 1rem;
     }
     .brand-icon {
         display: grid;
-        margin-left: 1em;
-
         /* cicular brand */
         grid-template-columns: 13px 11px 13px;
         grid-template-rows: 45px;
         clip-path: circle(17px at center);
-
         /* square brand */
         /* grid-template-columns: repeat(3, 9px);
         grid-template-rows: 27px; */
     }
+    .nav-buttons {
+        flex-grow: 1;
+        display: flex;
+        justify-content: space-around;
+    }
+    .social {
+        display: none;
+    }
     .social a {
         padding: 0.75em;
         color: black;
+    }
+    @media (min-width: 900px) {
+        .social {
+            display: inherit;
+        }
+    }
+    @media (min-width: 600px) {
+        nav {
+            gap: 2em;
+        }
+        .nav-buttons {
+            justify-content: flex-end; 
+        }
     }
 
 </style>

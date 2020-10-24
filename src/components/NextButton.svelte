@@ -1,11 +1,12 @@
 <script>
     export let index;
-    import { fly, fade } from "svelte/transition";
+    import { fly } from "svelte/transition";
     import { pages } from "./stores";
     let nextPage = index === ($pages.length - 1) ? $pages[0].name : $pages[index + 1].name;
 
-    let position = index === 2 || index === 1 ? "fixed" : null;
-    let color = getComputedStyle(document.body).getPropertyValue('--background')
+    let position = "fixed";
+    // let position = index === 2 || index === 1 ? "fixed" : null;
+    // let color = getComputedStyle(document.body).getPropertyValue('--background')
 
     function setPage() {
         let array = [...$pages];
@@ -28,48 +29,48 @@
 </button>
 
 <style>
-button {
-    display:inline-flex;
-    align-items:center;
-    background-color: var(--background);
-    color: var(--color);
-    opacity: 0.4;
-    justify-content: center;
-    margin: 1em;
-    padding: 0;
-    line-height: 1em;
-    border: none;
-    border-radius: 4em;
-    animation: bounce 0.5s ease-out infinite alternate forwards;
-    cursor: pointer;
-    transition: 0.3s ease 0.1s;
-    z-index: 3;
-    /* border: 0.3em solid var(--color); */
-    
-}
-button:hover {
-    color: var(--color);
-    background-color: inherit;
-    opacity: 0.8;
-    transition: 0.5s ease 0.1s;
-    /* animation-play-state: paused; */
-}
-/* button:focus {
-    border: 20px solid lightgray;
-} */
-/* svg {   
-    margin: 2em;
-} */
-.fixed {
-    position: fixed;
-    bottom: 2em;
-    color: var(--color);
-    opacity: 0.6;
-    margin-left: -3em;
-}
-
-@keyframes bounce {
-    0%   { transform: translateY(0px); }  
-    100%  { transform: translateY(-5px); }
-} 
+    button {
+        display: inline-flex;
+        align-items: center;
+        background-color: var(--background);
+        color: var(--color);
+        opacity: 0.4;
+        justify-content: center;
+        margin: 1em;
+        padding: 0;
+        line-height: 1em;
+        border: none;
+        border-radius: 100%;
+        animation: bounce 0.5s ease-out infinite alternate forwards;
+        cursor: pointer;
+        transition: 0.3s ease 0.1s;
+        z-index: 3;
+    }
+    button:hover {
+        color: var(--color);
+        background-color: inherit;
+        opacity: 0.8;
+        transition: 0.5s ease 0.1s;
+    }
+    .fixed {
+        position: fixed;
+        bottom: 0.2rem;
+        color: var(--color);
+        opacity: 0.6;
+        margin-left: -3em;
+    }
+    @keyframes bounce {
+        0%   { transform: translateY(0px); }  
+        100%  { transform: translateY(-5px); }
+    }
+    @media (min-width: 1200px) {
+        .fixed {
+            bottom: 1.5rem;
+        }
+    } 
+    @media (min-width: 600px) {
+        .fixed {
+            bottom: 1rem;
+        }
+    } 
 </style>

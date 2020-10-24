@@ -23,8 +23,8 @@
 <style>
 button {
     margin: 0;
-    width: 4em;
-    height: 4em;
+    width: 3.7em;
+    height: 3.7em;
     border: none;
     border-radius: 2em;
     background-color: white;
@@ -44,5 +44,11 @@ button {
 .black:hover {
     background-color: black;
     color: white;
+}
+@media (min-width: 600px) {
+    button {
+        width: 4em;
+        height: 4em;
+    }
 }
 </style>

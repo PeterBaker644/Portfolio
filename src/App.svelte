@@ -6,8 +6,13 @@
 
 <style>
     main {
-        padding-top: 7em;
+        padding: 8rem 0rem;
     }
+    @media (min-width: 600px) {
+    main {
+        padding: 5rem 0rem;
+    }
+}
 </style>
 
 <Header />

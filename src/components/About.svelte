@@ -10,12 +10,20 @@
         /* margin: 5vh 0em; */
     }
     img {
-        height: 15em;
-        margin: 4vh 0em 3vh;
+        height: 10em;
+        margin: 0.5em;
+        /* border: 1em solid black;
+        border-radius: 100%; */
     }
     .text {
         margin: auto;
         width: clamp(10em, 80vw, 100vw)
+    }
+    @media (min-width: 600px) {
+        img {
+            height: 15em;
+            margin: 4vh 0em 3vh;
+        }
     }
 </style>
 
@@ -28,10 +36,10 @@
         src="assets/images/Profile-Cutout-Shadow-Cropped-Face-Circle.png"
         alt="author smiling" />
     <div class="text">
-        <p>
+        <h2>
             Theatrical scenic artist by day and web developer by night, I’m
             dedicated to story-telling in all mediums.
-        </p>
+        </h2>
         <p>
             With seven years of theatrical experience in professional production
             teams, I look forward to producing and adapting designs both for the

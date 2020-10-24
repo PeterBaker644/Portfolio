@@ -78,9 +78,9 @@
         text-align: center;
     }
     .title {
-        padding: 2em 0em;
+        padding-bottom: 1em;
         border-bottom: solid 1em var(--color);
-        margin: 0em 2em 3em;
+        margin: 0em;
     }
 </style>
 

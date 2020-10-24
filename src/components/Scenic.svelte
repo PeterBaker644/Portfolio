@@ -157,9 +157,9 @@
         cursor: pointer;
     }
     .title {
-        padding: 2em 0em;
+        padding: 1em 0em;
         border-bottom: solid 1em var(--color);
-        margin-bottom: 3em;
+        margin: 0em;
     }
     .left:hover {
         animation: bounce-right 0.3s ease-out infinite alternate forwards;

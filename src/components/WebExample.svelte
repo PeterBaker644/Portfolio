@@ -11,7 +11,7 @@
                 <i class="fab fa-github"></i>
             </a>
         </h1>
-        <p>{description}</p>
+        <p class="pad">{description}</p>
         <p><strong>Key Technologies:</strong> {tech}</p>
     </div>
     <a href="{sourceUrl}" target="_blank" class="span">
@@ -20,12 +20,24 @@
 </div>
 
 <style>
+    p {
+        margin: 0;
+    }
+    h1 {
+        font-size: 2em;
+        margin: 0rem 0rem 1rem 0rem;
+    }
     .grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 3em;
-        margin: 2em;
-        padding-bottom: 2em;
+        grid-template-columns: 1fr;
+        gap: 0;
+        margin: 1em 0em;
+    }
+    img {
+        width: 100%;
+        /* object-fit: cover;
+        object-position: 50% 0%; */
+        margin: 2em 0em;
     }
     .span {
         grid-column: span 2;
@@ -35,12 +47,9 @@
         flex-flow: column;
         justify-content: center;
         align-items: center;
-        /* background-color: var(--color);
-        color: var(--background); */
-        padding: 1em;
     }
-    img {
-        width: 100%;
+    .pad {
+        padding-bottom: 0.5em;
     }
     .github {
         color:var(--mdgray);
@@ -63,4 +72,32 @@
     a.blue:hover {
 		color: var(--blue);
     }
+    @media (min-width: 1200px) {
+        .span {
+            grid-column: span 3;
+        }
+        .grid {
+            grid-template-columns: repeat(5, 1fr) !important;
+        }
+        .text {
+            margin: 0em 5vw;
+            grid-column: span 2;
+        }
+    }
+    @media (min-width: 900px) {
+        h1 {
+            font-size: 1.7em;
+        }
+        .grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3em;
+        }
+
+    }
+
+    /* @media (max-width: 600px) {
+        .grid {
+            grid-auto-flow: row;
+        }
+    } */
 </style>

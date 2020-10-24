@@ -47,10 +47,6 @@ a {
 	text-decoration: none;
 }
 
-a:hover {
-	text-decoration: underline;
-}
-
 a:visited {
 	color: var(--blue);
 }
@@ -160,3 +156,14 @@ section {
     grid-area: 1/1/2/2;
 }
 
+@media (min-width: 1200px) {
+    main {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 600px) {
+    main {
+        font-size: 14px;
+    }
+}
