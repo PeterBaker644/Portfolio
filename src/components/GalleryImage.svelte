@@ -25,7 +25,7 @@
         height: 100%;
         object-fit: cover;
         /* opacity: 0.2; */
-        /* transition: 500ms; */
+        transition: 500ms;
     }
 
     .item-overlay {
