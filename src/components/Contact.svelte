@@ -8,20 +8,16 @@
     section {
         text-align: center;
     }
-    a {
-        color:var(--ltblue);
-    }
     .contact h1, .contact p {
         margin: 0;
     }
     .contact {
         display: grid;
         place-content: center;
-        font-size: 0.8em;
-        grid-template-columns: repeat(3, 28vw);
-        grid-template-rows: 28vw;
+        grid-template-columns: repeat(2, 30vw);
+        grid-auto-rows: 30vw;
         gap: 1em;
-        margin: 2em 0em;
+        margin: 1em 0em;
     }
     .link {
         display: flex;
@@ -50,7 +46,6 @@
     }
     i {
         margin: 0em 0.2em;
-        color: var(--mdgray);
     }
     @media (min-width: 900px) {
         .social {
@@ -59,10 +54,9 @@
     }
     @media (min-width: 600px) {
         .contact {
-            font-size: 1em;
             gap: 2em;
             grid-template-columns: repeat(3, 20vw);
-            grid-template-rows: 20vw;
+            grid-auto-rows: 20vw;
         }
     }
 </style>
@@ -85,11 +79,9 @@
         <a href="mailto:baker644@umn.edu" class="link blue">
             <h1>Email</h1>
         </a>
-    </div>
-    <div class="social">
-        <a target="_blank" href="https://www.linkedin.com/in/peter-baker-b324a21a3/" class="red-hover"><i class="fab fa-linkedin-in fa-2x"></i></a>
-        <a target="_blank" href="https://github.com/PeterBaker644/" class="yellow-hover"><i class="fab fa-github fa-2x"></i></a>
-        <a target="_blank" href="https://www.instagram.com/sirchamomile/" class="blue-hover"><i class="fab fa-instagram fa-2x"></i></a>
+        <a target="_blank" href="https://www.linkedin.com/in/peter-baker-b324a21a3/" class="link red social"><i class="fab fa-linkedin-in fa-2x"></i></a>
+        <a target="_blank" href="https://github.com/PeterBaker644/" class="link yellow social"><i class="fab fa-github fa-2x"></i></a>
+        <a target="_blank" href="https://www.instagram.com/sirchamomile/" class="link blue social"><i class="fab fa-instagram fa-2x"></i></a>
     </div>
     <p>
         This website was coded in <a href="https://svelte.dev/" style="color:#ff3e00">Svelte</a>.

@@ -8,7 +8,7 @@
     main {
         padding: 8rem 0rem;
     }
-    @media (min-width: 600px) {
+    @media (min-width: 510px) {
     main {
         padding: 5rem 0rem;
     }
@@ -23,4 +23,6 @@
         {/if}
     {/each}
 </main>
-<Footer />
+{#if $pages[3].visible !== true}
+    <Footer />
+{/if}

@@ -8,6 +8,7 @@
     section {
         text-align: center;
         /* margin: 5vh 0em; */
+        /* height: 100%; */
     }
     img {
         height: 10em;

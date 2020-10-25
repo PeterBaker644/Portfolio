@@ -77,7 +77,7 @@
         margin-right: 1rem;
     }
     .brand-icon {
-        display: grid;
+        display: none;
         /* cicular brand */
         grid-template-columns: 13px 11px 13px;
         grid-template-rows: 45px;
@@ -102,10 +102,13 @@
         .social {
             display: inherit;
         }
+        .brand-icon {
+            display: grid;
+        }
     }
     @media (min-width: 600px) {
-        nav {
-            gap: 2em;
+        nav, .nav-buttons {
+            gap: 1em;
         }
         .nav-buttons {
             justify-content: flex-end; 

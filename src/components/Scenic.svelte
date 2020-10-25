@@ -8,6 +8,7 @@
 
     let overlaySource = null;
     let overlayInfo = false;
+    let overlayID = null;
     // let randomList = shuffle(list);
 
     function handleClick(event) {
@@ -15,15 +16,15 @@
         overlaySource = image.src;
         let i = list.findIndex(obj => obj.id === Number(image.id));
         overlayInfo = list[i];
+        overlayID = i;
     }
 
     function nextImage(next) {
-        console.log(overlaySource);
-        console.log("The ID is: ", overlayInfo.id);
-        let id = overlayInfo.id;
-        let newId = next ? (id + 1) : id > 1 ? (id - 1) : 1;
-        console.log(newId);
-        overlayInfo = list[newId - 1];
+        let id = overlayID;
+        let maxIndex = list.length - 1;
+        let newId = next ? ( id === maxIndex ? maxIndex : id + 1) : id > 0 ? (id - 1) : 0;
+        overlayInfo = list[newId];
+        overlayID = newId;
         overlaySource = overlayInfo.src;
     }
 
@@ -51,7 +52,7 @@
         const items = [...document.querySelectorAll("img")];
 
         const options = {
-            rootMargin: "-200px 0px -50px 0px",
+            rootMargin: "-150px 0px -50px 0px",
             threshold: 0.75,
         };
 
@@ -80,8 +81,15 @@
     section {
         text-align: center;
     }
+    figure {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+        max-height: 80vh;
+    }
     figcaption {
-        /* display: flex; */
         justify-content: space-between;
     }
     p {
@@ -102,20 +110,27 @@
     .inner-overlay button:hover {
         cursor: pointer;
     }
+    .close {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        background-color: transparent !important;
+        color: var(--background);
+    }
     .gallery {
         display: grid;
-        grid-template-columns: repeat(auto-fill, 100px);
-        grid-auto-rows: 100px;
-        /* grid-auto-flow: dense; */
-        gap: 1rem;
-        padding: 1rem;
+        grid-template-columns: repeat(auto-fill, 70px);
+        grid-auto-rows: 70px;
+        grid-auto-flow: dense;
+        gap: 0.8rem;
+        padding: 1em 0;
         justify-content: center;
     }
     .buttonFrame {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
-        width: 90vw;
+        width: 100vw;
     }
     .overlay {
         position: fixed;
@@ -130,20 +145,23 @@
         justify-content: center;
     }
     .overlay .inner-overlay {
-        background: white;
-        color: black;
-        width: 40rem;
-        padding: 20px;
-        margin: 1em 0em;
+        background: var(--background);
+        color: var(--color);
+        margin: 0em;
     }
-    .overlay img {
+    .inner-overlay img {
         width: 100%;
+        max-height: 100%;
+        height: 20em;
+        /* max-height: 100%; */
+        object-fit: cover;
     }
     .gap {
         margin-top: 1em;
         margin-bottom: 1em;
     }
     .pageButton {
+        display: none;
         background-color: transparent;
         color: var(--ltgray);
         opacity: 0.4;
@@ -175,7 +193,35 @@
         0%   { transform: translateX(-5px); }  
         100%  { transform: translateX(5px); }
     } 
-    
+    @media (min-width: 1200px) {
+        .gallery {
+            grid-auto-flow: unset;
+        }
+    }
+    @media (min-width: 750px) {
+        .pageButton {
+            display: block;
+            justify-content: space-between;
+        }
+    }
+    @media (min-width: 600px) {
+        .overlay img {
+            height: 30em;
+        }
+        .gallery {
+            grid-template-columns: repeat(auto-fill, 100px);
+            grid-auto-rows: 100px;
+            gap: 1rem;
+            padding: 1rem;
+        }
+        .overlay .inner-overlay {
+            background: var(--background);
+            color: var(--color);
+            width: 40rem;
+            padding: 20px;
+            margin: 1em 0em;
+        }
+    }
 </style>
 
 <section
@@ -197,7 +243,11 @@
                     </svg>
                 </button>
                 <figure class="inner-overlay" on:click|stopPropagation in:fade="{{duration:400}}" out:fade="{{duration:200}}">
-                    <button on:click={() => overlaySource = null}>x Close</button>
+                    <button class="close" on:click={() => overlaySource = null}>
+                        <svg width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                          </svg>
+                    </button>
                     <img src={overlaySource} alt="scenic close-up"/>
                     <figcaption>
                         <p class="gap">{overlayInfo.description}</p>

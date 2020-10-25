@@ -1,3 +1,8 @@
+<script>
+
+import { fade } from "svelte/transition";
+
+</script>
 <style>
     footer {
         position: fixed;
@@ -22,11 +27,16 @@
         position: fixed;
         left: 0;
         bottom: 5vh;
-        border-radius: 1em;
+        border-radius: 0 1em 1em 0;
     }
+    @media (min-width: 600px) {
+    .social {
+        display: none;
+    }
+}
 </style>
 
-<footer>
+<footer transition:fade>
     <div class="social">
         <a target="_blank" href="https://www.linkedin.com/in/peter-baker-b324a21a3/" class="red-hover"><i class="fab fa-linkedin-in"></i></a>
         <a target="_blank" href="https://github.com/PeterBaker644/" class="yellow-hover"><i class="fab fa-github"></i></a>
