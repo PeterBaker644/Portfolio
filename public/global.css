@@ -156,12 +156,19 @@ section {
     grid-area: 1/1/2/2;
 }
 
-@media (min-width: 1200px) {
-    main {
-        font-size: 1.2em;
+@media (min-width: 2500px) {
+    main, button, i {
+        font-size: 2em !important;
+    }
+    h1 {
+        font-size: 3em !important;
     }
 }
-
+@media (min-width: 1200px) {
+    main {
+        font-size: 1em;
+    }
+}
 @media (max-width: 600px) {
     main {
         font-size: 14px;

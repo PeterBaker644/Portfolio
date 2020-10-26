@@ -98,6 +98,9 @@
         padding: 0.75em;
         color: black;
     }
+    @media (min-width: 1200px) {
+        
+    }
     @media (min-width: 900px) {
         .social {
             display: inherit;
