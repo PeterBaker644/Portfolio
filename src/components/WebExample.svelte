@@ -7,8 +7,11 @@
 <div class="grid item-web">
     <div class="text">
         <h1 class={color}>{name}
-            <a href="https://github.com/PeterBaker644/{github}" target="_blank" class="github {color}">
+            <a href="https://github.com/PeterBaker644/{github}" target="_blank" class="link {color}">
                 <i class="fab fa-github"></i>
+            </a>
+            <a href="{sourceUrl}" target="_blank" class="link {color}">
+                <i class="fas fa-link"></i>
             </a>
         </h1>
         <p class="pad">{description}</p>
@@ -51,7 +54,7 @@
     .pad {
         padding-bottom: 0.5em;
     }
-    .github {
+    .link {
         color:var(--mdgray);
     }
     .red {
