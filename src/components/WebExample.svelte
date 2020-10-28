@@ -1,5 +1,5 @@
 <script>
-    export let id, name, description, tech, sourceUrl, github, image;
+    export let id, name, description, tech, sourceUrl, github, image, codingTeam, role;
     const color = ["red","yellow","blue"][(id % 3)];
     const position = ["left","right"][(id % 2)];
 </script>
@@ -15,7 +15,19 @@
             </a>
         </h1>
         <p class="pad">{description}</p>
-        <p><strong>Key Technologies:</strong> {tech}</p>
+        <p class="pad"><strong>Key Technologies:</strong> {tech}</p>
+        {#if role}
+            <p class="pad"><strong>Role:</strong> {role}</p>
+        {/if}
+        {#if codingTeam}
+            <p><strong>Coding Team:</strong>
+                {#each codingTeam as {git, name}, index}
+                    <a href="github.com/{git}">
+                        {name}{index !== codingTeam.length - 1 ? "," : ""}
+                    </a>
+                {/each}
+            </p>
+        {/if}
     </div>
     <a href="{sourceUrl}" target="_blank" class="span">
         <img class="hue-{color}" src="/assets/images/{image}" alt="{name}">

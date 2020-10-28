@@ -13,7 +13,8 @@
             sourceUrl:"https://project-3-recipe-box.herokuapp.com/", 
             github:"Recipe-Journal", 
             image:"screenshot-recipebox.png",
-            codingTeam: [{name:"Jacob Kyle", git:"jkthomps21"}, {name:"Gene Shaver", git:"gshaver82"}, {name:"Chue Yang", git:"chueny"}]
+            codingTeam: [{name:"Jacob Kyle", git:"jkthomps21"}, {name:"Gene Shaver", git:"gshaver82"}, {name:"Chue Yang", git:"chueny"}],
+            role:"Backend, Auth, React, UI, Layout"
         },
         {
             id: 1, 
@@ -23,7 +24,8 @@
             sourceUrl:"https://github.com/PeterBaker644/Mixtape/", 
             github:"Mixtape", 
             image:"screenshot-mixtape.png",
-            codingTeam: [{name:"Gene Shaver", git:"gshaver82"}, {name:"Vanida Somchaleunsouk", git:"vsomsouk"},{name:"Simeon Ogunyemi", git:"Simdog"}]
+            codingTeam: [{name:"Gene Shaver", git:"gshaver82"}, {name:"Vanida Somchaleunsouk", git:"vsomsouk"},{name:"Simeon Ogunyemi", git:"Simdog"}],
+            role:"Lead Programmer and Designer"
         },
         {
             id: 2, 
