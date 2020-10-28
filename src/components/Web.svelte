@@ -21,7 +21,7 @@
             name:"Mixtape", 
             description:"Mixtape is a social media music sharing website designed for desktop and mobile",
             tech:"Express, MySQL, Handlebars.js, Passport, jQuery, Bootstrap", 
-            sourceUrl:"https://github.com/PeterBaker644/Mixtape/", 
+            sourceUrl:"https://project-2-mixtape.herokuapp.com/", 
             github:"Mixtape", 
             image:"screenshot-mixtape.png",
             codingTeam: [{name:"Gene Shaver", git:"gshaver82"}, {name:"Vanida Somchaleunsouk", git:"vsomsouk"},{name:"Simeon Ogunyemi", git:"Simdog"}],
