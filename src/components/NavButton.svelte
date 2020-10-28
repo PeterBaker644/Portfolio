@@ -11,7 +11,6 @@
                 array[index] = {...entry, visible:false};
             }
         })
-        console.log("Array = ", array);
         pages.set(array);
     }
 </script>

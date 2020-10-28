@@ -1,10 +1,15 @@
 <script>
-    export let id, name, description, tech, sourceUrl, github, image, codingTeam, role;
+    export let id, name, description, tech, sourceUrl, github, image, gif,codingTeam, role;
     const color = ["red","yellow","blue"][(id % 3)];
     const position = ["left","right"][(id % 2)];
+    let hover = false;
 </script>
 
-<div class="grid item-web">
+<div 
+    on:mouseenter|self="{() => hover = true}"
+    on:mouseleave="{() => hover = false}"
+    class="grid item-web"
+>
     <div class="text">
         <h1 class={color}>{name}
             <a href="https://github.com/PeterBaker644/{github}" target="_blank" class="link {color}">
@@ -30,7 +35,7 @@
         {/if}
     </div>
     <a href="{sourceUrl}" target="_blank" class="span">
-        <img class="hue-{color}" src="/assets/images/{image}" alt="{name}">
+        <img class="hue-{color}" src="/assets/images/{hover ? gif ? gif : image : image}" alt="{name}">
     </a>
 </div>
 

@@ -13,6 +13,7 @@
             sourceUrl:"https://project-3-recipe-box.herokuapp.com/", 
             github:"Recipe-Journal", 
             image:"screenshot-recipebox.png",
+            gif:"demo-recipebox.gif",
             codingTeam: [{name:"Jacob Kyle", git:"jkthomps21"}, {name:"Gene Shaver", git:"gshaver82"}, {name:"Chue Yang", git:"chueny"}],
             role:"Backend, Auth, React, UI, Layout"
         },
@@ -24,6 +25,7 @@
             sourceUrl:"https://project-2-mixtape.herokuapp.com/", 
             github:"Mixtape", 
             image:"screenshot-mixtape.png",
+            gif:"demo-mixtape.gif",
             codingTeam: [{name:"Gene Shaver", git:"gshaver82"}, {name:"Vanida Somchaleunsouk", git:"vsomsouk"},{name:"Simeon Ogunyemi", git:"Simdog"}],
             role:"Lead Programmer and Designer"
         },
@@ -34,7 +36,8 @@
             tech:"Express, MySQL, jQuery, Bootstrap", 
             sourceUrl:"https://boiling-journey-57320.herokuapp.com/", 
             github:"Task-Manager", 
-            image:"screenshot-tasks.png"
+            image:"screenshot-task.png",
+            gif:"demo-task.gif"
         },
         {
             id: 3, 
@@ -43,7 +46,8 @@
             tech:"jQuery, Bootstrap", 
             sourceUrl:"https://peterbaker644.github.io/Weather-Application/", 
             github:"Weather-Application", 
-            image:"screenshot-weather.png"
+            image:"screenshot-weather.png",
+            gif:"demo-weather.gif"
         }, 
         {
             id: 4, 
@@ -52,7 +56,8 @@
             tech:"React", 
             sourceUrl:"https://peterbaker644.github.io/Dynamic-Table-Generator/", 
             github:"Dynamic-Table-Generator", 
-            image:"screenshot-table.png"
+            image:"screenshot-table.png",
+            gif:"demo-table.gif"
         }, 
         {
             id: 5, 
@@ -70,7 +75,8 @@
             tech:"Javascript, CSS", 
             sourceUrl:"https://peterbaker644.github.io/Quiz-Application/", 
             github:"Quiz-Application", 
-            image:"screenshot-quiz.png"
+            image:"screenshot-quiz.png",
+            gif:"demo-quiz.gif"
         }
     ]
 </script>

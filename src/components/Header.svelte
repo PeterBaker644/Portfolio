@@ -1,12 +1,24 @@
 <script>
     import NavButton from  "./NavButton.svelte"
-    import { pages } from './stores.js';
+    import { pages } from './stores';
+
+function setPage() {
+    let array = [...$pages];
+    $pages.forEach((entry, index) => {
+        if (entry.name === "about") {
+            array[index] = {...entry, visible:true};
+        } else {
+            array[index] = {...entry, visible:false};
+        }
+    })
+    pages.set(array);
+}
 </script>
 
 <header>
 	<nav>
 		<div class="brand">
-			<h1 class="brand-title">
+			<h1 on:click={setPage} class="brand-title">
 				PETER BAKER
 			</h1>
 			<i class="brand-icon">
@@ -76,6 +88,9 @@
         margin: 0em;
         margin-right: 1rem;
     }
+    .brand-title:hover {
+        cursor: pointer;
+    }
     .brand-icon {
         display: none;
         /* cicular brand */
@@ -97,9 +112,6 @@
     .social a {
         padding: 0.75em;
         color: black;
-    }
-    @media (min-width: 1200px) {
-        
     }
     @media (min-width: 900px) {
         .social {

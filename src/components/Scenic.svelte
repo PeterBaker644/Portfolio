@@ -192,6 +192,12 @@
     @keyframes bounce-right {
         0%   { transform: translateX(-5px); }  
         100%  { transform: translateX(5px); }
+    }
+    @media (min-width: 2000px) {
+        .gallery {
+            grid-template-columns: repeat(auto-fill, 150px);
+            grid-auto-rows: 150px;
+        }
     } 
     @media (min-width: 1200px) {
         .gallery {
