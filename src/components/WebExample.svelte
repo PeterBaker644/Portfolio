@@ -27,7 +27,7 @@
         {#if codingTeam}
             <p><strong>Coding Team:</strong>
                 {#each codingTeam as {git, name}, index}
-                    <a href="github.com/{git}">
+                    <a href="https://github.com/{git}">
                         {name}{index !== codingTeam.length - 1 ? "," : ""}
                     </a>
                 {/each}
