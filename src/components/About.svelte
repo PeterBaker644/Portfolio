@@ -49,6 +49,9 @@
             to learn more efficient approaches and technologies.
         </p>
         <p>
+            I have trained in full stack development using MongoDB, Express, React.js, and Node, but I also enjoy using Svelte and Firebase.
+        </p>
+        <p>
             Feel free to contact me with questions or for more information at
             any time.
         </p>
